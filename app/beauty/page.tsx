@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function BeautyPage() {
   return (
-    <DiagnosisIntro diagnosis={diagnosis}>
+    <DiagnosisIntro diagnosis={diagnosis} heroClassName="beauty-hero">
       <p>
         美容診断は準備中です。日々のセルフケアや美容との向き合い方を、無理なく前向きに考えるための
         診断を予定しています。

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function LovePage() {
   return (
-    <DiagnosisIntro diagnosis={diagnosis}>
+    <DiagnosisIntro diagnosis={diagnosis} heroClassName="love-hero">
       <p>
         恋愛診断では、今の気持ちや相手との向き合い方を落ち着いて見つめるきっかけを案内します。
         迷いを急いで決めつけるのではなく、自分のペースで整理したい方に向けた診断です。

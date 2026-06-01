@@ -15,6 +15,7 @@ export default function DiagnosesPage() {
         eyebrow="診断一覧"
         title="気になるテーマから診断を選ぶ"
         description="公開済みの診断は外部の診断サイトへ移動できます。準備中の診断は、公開までお待ちください。"
+        className="diagnoses-hero"
       />
       <section className="section section--compact">
         <DiagnosisGrid items={diagnoses} />

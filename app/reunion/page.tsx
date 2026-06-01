@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ReunionPage() {
   return (
-    <DiagnosisIntro diagnosis={diagnosis}>
+    <DiagnosisIntro diagnosis={diagnosis} heroClassName="reunion-hero">
       <p>
         復縁診断は準備中です。過去の関係を急いで結論づけるのではなく、自分の気持ちやこれからの距離感を
         穏やかに整理できる内容を予定しています。

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function MeetingStylePage() {
   return (
-    <DiagnosisIntro diagnosis={diagnosis}>
+    <DiagnosisIntro diagnosis={diagnosis} heroClassName="meeting-style-hero">
       <p>
         出会い方診断では、普段の過ごし方や人との距離感をふまえて、取り入れやすい出会い方を考える
         きっかけを案内します。安心して試せる選択肢を見つけたい方に向けた診断です。
