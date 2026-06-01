@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function MarriagePage() {
   return (
-    <DiagnosisIntro diagnosis={diagnosis}>
+    <DiagnosisIntro diagnosis={diagnosis} heroClassName="marriage-hero">
       <p>
         婚活診断では、活動の進め方や大切にしたい価値観を整理するためのヒントを得られます。
         結果は参考情報として、無理のない行動を考える材料にしてください。

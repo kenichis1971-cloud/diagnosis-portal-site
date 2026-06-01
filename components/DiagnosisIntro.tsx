@@ -3,13 +3,15 @@ import type { Diagnosis } from "@/data/diagnoses";
 type DiagnosisIntroProps = {
   diagnosis: Diagnosis;
   children: React.ReactNode;
+  heroClassName?: string;
 };
 
-export function DiagnosisIntro({ diagnosis, children }: DiagnosisIntroProps) {
+export function DiagnosisIntro({ diagnosis, children, heroClassName }: DiagnosisIntroProps) {
   const isPublished = diagnosis.status === "published";
+  const sectionClassName = ["detail-card", "hero-image-slot", heroClassName].filter(Boolean).join(" ");
 
   return (
-    <section className="detail-card">
+    <section className={sectionClassName}>
       <div className="detail-card__header">
         <span className="eyebrow">{diagnosis.category}</span>
         <span className={`status-badge status-badge--${diagnosis.status}`}>

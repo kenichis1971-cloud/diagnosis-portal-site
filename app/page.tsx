@@ -5,7 +5,7 @@ import { comingSoonDiagnoses, diagnoses, publishedDiagnoses } from "@/data/diagn
 export default function Home() {
   return (
     <>
-      <section className="hero">
+      <section className="hero hero-image-slot top-hero">
         <div className="hero__content">
           <p className="eyebrow">総合診断ポータル</p>
           <h1>自分に合う診断を、やさしく選べる場所</h1>
