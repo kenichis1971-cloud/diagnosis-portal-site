@@ -187,15 +187,7 @@ main {
 
 /*
   Future hero image slots. Add background images to these page-specific classes later.
-  Expected files:
-  - public/images/heroes/top-hero-pc.jpg / public/images/heroes/top-hero-sp.jpg
-  - public/images/heroes/diagnoses-hero-pc.jpg / public/images/heroes/diagnoses-hero-sp.jpg
-  - public/images/heroes/love-hero-pc.jpg / public/images/heroes/love-hero-sp.jpg
-  - public/images/heroes/marriage-hero-pc.jpg / public/images/heroes/marriage-hero-sp.jpg
-  - public/images/heroes/meeting-style-hero-pc.jpg / public/images/heroes/meeting-style-hero-sp.jpg
-  - public/images/heroes/reunion-hero-pc.jpg / public/images/heroes/reunion-hero-sp.jpg
-  - public/images/heroes/beauty-hero-pc.jpg / public/images/heroes/beauty-hero-sp.jpg
-  - public/images/heroes/sexual-worries-hero-pc.jpg / public/images/heroes/sexual-worries-hero-sp.jpg
+  The top page uses uploaded .jpeg assets; remaining pages are intentionally unset.
 */
 .top-hero,
 .diagnoses-hero,
@@ -208,6 +200,56 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.top-hero {
+  min-height: clamp(460px, 50vw, 620px);
+  margin-top: 28px;
+  border: 1px solid rgba(234, 223, 214, 0.5);
+  border-radius: 36px;
+  padding: clamp(42px, 6vw, 72px);
+  background-image: url("/images/heroes/top-hero-pc.jpeg");
+  box-shadow: 0 20px 48px rgba(116, 80, 63, 0.14);
+}
+
+.top-hero::before {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(255, 250, 247, 0.9) 39%,
+    rgba(255, 250, 247, 0.5) 66%,
+    rgba(255, 250, 247, 0.16) 100%
+  );
+}
+
+.top-hero .hero__content {
+  max-width: 640px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.top-hero .eyebrow {
+  color: var(--primary-dark);
+}
+
+.top-hero p,
+.top-hero .hero__note {
+  color: #554a43;
+}
+
+.top-hero .hero__panel {
+  justify-self: end;
+  width: min(100%, 300px);
+}
+
+.top-hero .hero__panel div {
+  border-color: rgba(255, 255, 255, 0.62);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 14px 34px rgba(116, 80, 63, 0.13);
+  backdrop-filter: blur(10px);
 }
 
 .eyebrow {
@@ -499,6 +541,16 @@ main {
     padding-top: 36px;
   }
 
+  .top-hero {
+    min-height: 560px;
+    gap: 28px;
+    padding: 38px;
+  }
+
+  .top-hero .hero__panel {
+    width: 100%;
+  }
+
   .hero__panel {
     width: 100%;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -549,6 +601,28 @@ main {
 
   .site-footer__nav {
     gap: 8px 16px;
+  }
+
+  .top-hero {
+    min-height: 620px;
+    margin-top: 18px;
+    border-radius: 28px;
+    padding: 30px 22px;
+    background-image: url("/images/heroes/top-hero-sp.jpeg");
+    background-position: center top;
+  }
+
+  .top-hero::before {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.96) 0%,
+      rgba(255, 250, 247, 0.88) 52%,
+      rgba(255, 250, 247, 0.4) 100%
+    );
+  }
+
+  .top-hero .hero__panel div {
+    padding: 22px;
   }
 
   .hero__content,
