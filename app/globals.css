@@ -170,15 +170,23 @@ main {
 
 .page-hero.hero-image-slot,
 .detail-card.hero-image-slot {
-  min-height: clamp(260px, 34vw, 380px);
+  min-height: clamp(320px, 36vw, 480px);
+  border-color: rgba(234, 223, 214, 0.58);
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 247, 238, 0.84)),
-    rgba(255, 255, 255, 0.82);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.74), rgba(255, 247, 238, 0.5)),
+    rgba(255, 255, 255, 0.68);
+  box-shadow: 0 18px 44px rgba(116, 80, 63, 0.1);
 }
 
 .page-hero.hero-image-slot::before,
 .detail-card.hero-image-slot::before {
-  background: rgba(255, 255, 255, 0.44);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.94) 0%,
+    rgba(255, 250, 247, 0.82) 42%,
+    rgba(255, 250, 247, 0.42) 70%,
+    rgba(255, 250, 247, 0.08) 100%
+  );
 }
 
 .hero.hero-image-slot {
@@ -477,6 +485,38 @@ main {
   max-width: 900px;
 }
 
+.hero-image-slot {
+  width: calc(100vw - 32px);
+  max-width: none;
+  margin-right: calc(50% - 50vw + 16px);
+  margin-left: calc(50% - 50vw + 16px);
+}
+
+.page-hero.hero-image-slot,
+.detail-card.hero-image-slot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.page-hero.hero-image-slot > *,
+.detail-card.hero-image-slot > * {
+  width: min(100%, 720px);
+}
+
+.detail-card.hero-image-slot .button {
+  width: fit-content;
+}
+
+@media (min-width: 1392px) {
+  .hero-image-slot {
+    width: 1360px;
+    margin-right: calc(50% - 680px);
+    margin-left: calc(50% - 680px);
+  }
+}
+
 .text-page h2 {
   margin: 30px 0 10px;
   font-size: 1.28rem;
@@ -632,9 +672,19 @@ main {
     border-radius: 24px;
   }
 
+  .hero-image-slot {
+    width: calc(100vw - 24px);
+    margin-right: calc(50% - 50vw + 12px);
+    margin-left: calc(50% - 50vw + 12px);
+  }
+
   .page-hero.hero-image-slot,
   .detail-card.hero-image-slot {
-    min-height: auto;
+    min-height: clamp(360px, 82vw, 460px);
+  }
+
+  .detail-card.hero-image-slot .button {
+    width: 100%;
   }
 
   .hero__panel,
