@@ -9,6 +9,19 @@ export type Diagnosis = {
   buttonLabel?: string;
 };
 
+export type DiagnosisCategory = {
+  name: string;
+  summary: string;
+  href: string;
+  status: Diagnosis["status"];
+  diagnosisSlug: string;
+};
+
+export type PrSlot = {
+  title: string;
+  description: string;
+};
+
 export const diagnoses: Diagnosis[] = [
   {
     slug: "love",
@@ -44,15 +57,15 @@ export const diagnoses: Diagnosis[] = [
     slug: "reunion",
     name: "復縁診断",
     status: "coming-soon",
-    category: "気持ちの整理",
-    description: "復縁したい気持ちや今後の向き合い方を整理する診断予定です。",
+    category: "復縁",
+    description: "過去の関係との向き合い方を整理する診断予定です。",
     href: "/reunion",
   },
   {
     slug: "beauty",
     name: "美容診断",
     status: "coming-soon",
-    category: "セルフケア",
+    category: "美容",
     description: "自分に合う美容・セルフケアの方向性を整理する診断予定です。",
     href: "/beauty",
   },
@@ -60,9 +73,69 @@ export const diagnoses: Diagnosis[] = [
     slug: "sexual-worries",
     name: "性の悩み診断",
     status: "coming-soon",
-    category: "悩みの整理",
-    description: "恋愛・結婚の中で言葉にしづらい性に関する悩みを、やさしく整理する診断予定です。",
+    category: "性の悩み",
+    description: "言葉にしづらい悩みを、やさしく整理する診断予定です。",
     href: "/sexual-worries",
+  },
+];
+
+export const diagnosisCategories: DiagnosisCategory[] = [
+  {
+    name: "恋愛",
+    summary: "恋愛傾向や気持ちの整理",
+    href: "/love",
+    status: "published",
+    diagnosisSlug: "love",
+  },
+  {
+    name: "婚活",
+    summary: "婚活スタイルや行動の方向性",
+    href: "/marriage",
+    status: "published",
+    diagnosisSlug: "marriage",
+  },
+  {
+    name: "出会い方",
+    summary: "自分に合う出会い方の整理",
+    href: "/meeting-style",
+    status: "published",
+    diagnosisSlug: "meeting-style",
+  },
+  {
+    name: "復縁",
+    summary: "過去の関係との向き合い方",
+    href: "/reunion",
+    status: "coming-soon",
+    diagnosisSlug: "reunion",
+  },
+  {
+    name: "美容",
+    summary: "自分に合うセルフケア",
+    href: "/beauty",
+    status: "coming-soon",
+    diagnosisSlug: "beauty",
+  },
+  {
+    name: "性の悩み",
+    summary: "言葉にしづらい悩みの整理",
+    href: "/sexual-worries",
+    status: "coming-soon",
+    diagnosisSlug: "sexual-worries",
+  },
+];
+
+export const prSlots: PrSlot[] = [
+  {
+    title: "占い鑑定・気持ち整理",
+    description: "恋愛や人間関係の気持ちを見つめ直す読みものやサービスを案内する枠です。",
+  },
+  {
+    title: "婚活・出会いサービス",
+    description: "婚活や出会い方の選択肢を考えるための情報を掲載する枠です。",
+  },
+  {
+    title: "美容・セルフケア",
+    description: "毎日のセルフケアや美容テーマに関する案内を掲載する枠です。",
   },
 ];
 
