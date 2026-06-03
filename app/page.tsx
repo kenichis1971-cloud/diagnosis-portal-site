@@ -16,7 +16,11 @@ export default function Home() {
       <section className="hero hero-image-slot top-hero">
         <div className="hero__content">
           <p className="eyebrow">総合診断ポータル</p>
-          <h1>自分に合う診断を、やさしく選べる場所</h1>
+          <h1 className="top-hero__title">
+            <span className="top-hero__title-line">自分に合う診断を</span>
+            <br />
+            <span className="top-hero__title-line">やさしく選べる場所</span>
+          </h1>
           <p>
             恋愛・婚活・出会い方など、気持ちや行動を整理するための診断をまとめました。
           </p>
