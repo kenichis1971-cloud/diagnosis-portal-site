@@ -54,14 +54,32 @@ export default function Home() {
         </div>
         <div className="category-guide-grid">
           {categoryGuides.map((category) => (
-            <Link className="category-guide-card" href={category.href} key={category.slug}>
+            <article className="category-guide-card" key={category.slug}>
               <span className={`status-badge status-badge--${category.status}`}>
                 {category.status === "published" ? "公開済み" : "準備中"}
               </span>
               <h3>{category.name}</h3>
               <p>{category.lead}</p>
-              <span className="category-guide-card__link">詳しく見る</span>
-            </Link>
+              <div className="category-guide-card__actions">
+                <Link className="category-guide-card__link" href={category.href}>
+                  テーマを見る
+                </Link>
+                {category.noteUrl ? (
+                  <a
+                    className="category-guide-card__note"
+                    href={category.noteUrl}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    {category.noteLabel ?? "note"}
+                  </a>
+                ) : (
+                  <span className="category-guide-card__note category-guide-card__note--disabled">
+                    note準備中
+                  </span>
+                )}
+              </div>
+            </article>
           ))}
         </div>
       </section>
