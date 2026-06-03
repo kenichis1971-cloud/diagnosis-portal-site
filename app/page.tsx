@@ -2,6 +2,8 @@ import Link from "next/link";
 import { DiagnosisGrid } from "@/components/DiagnosisGrid";
 import {
   categoryGuides,
+  categoryNotePlaceholderLabel,
+  defaultCategoryNoteLabel,
   comingSoonDiagnoses,
   diagnoses,
   prGuideSlots,
@@ -71,11 +73,11 @@ export default function Home() {
                     rel="noreferrer"
                     target="_blank"
                   >
-                    {category.noteLabel ?? "note"}
+                    {category.noteLabel ?? defaultCategoryNoteLabel}
                   </a>
                 ) : (
                   <span className="category-guide-card__note category-guide-card__note--disabled">
-                    note準備中
+                    {categoryNotePlaceholderLabel}
                   </span>
                 )}
               </div>

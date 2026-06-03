@@ -76,6 +76,9 @@ export const diagnoses: Diagnosis[] = [
 export const publishedDiagnoses = diagnoses.filter((diagnosis) => diagnosis.status === "published");
 export const comingSoonDiagnoses = diagnoses.filter((diagnosis) => diagnosis.status === "coming-soon");
 
+export const defaultCategoryNoteLabel = "note";
+export const categoryNotePlaceholderLabel = "note準備中";
+
 export type CategoryGuide = {
   slug: string;
   name: string;
@@ -92,7 +95,7 @@ export const categoryGuides: CategoryGuide[] = diagnoses.map((diagnosis) => ({
   lead: diagnosis.categoryLead,
   href: diagnosis.href,
   status: diagnosis.status,
-  noteLabel: "note",
+  noteLabel: defaultCategoryNoteLabel,
 }));
 
 export const prGuideSlots = [

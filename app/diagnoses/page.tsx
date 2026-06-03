@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DiagnosisGrid } from "@/components/DiagnosisGrid";
-import { categoryGuides, diagnoses } from "@/data/diagnoses";
+import {
+  categoryGuides,
+  categoryNotePlaceholderLabel,
+  defaultCategoryNoteLabel,
+  diagnoses,
+} from "@/data/diagnoses";
 import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
@@ -46,11 +51,11 @@ export default function DiagnosesPage() {
                       rel="noreferrer"
                       target="_blank"
                     >
-                      {category.noteLabel ?? "note"}
+                      {category.noteLabel ?? defaultCategoryNoteLabel}
                     </a>
                   ) : (
                     <span className="category-list__note category-list__note--disabled">
-                      note準備中
+                      {categoryNotePlaceholderLabel}
                     </span>
                   )}
                 </div>
