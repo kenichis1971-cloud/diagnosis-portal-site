@@ -471,43 +471,49 @@ main {
 
 .category-guide-card__link,
 .category-list__link {
+  border: 1px solid rgba(117, 80, 63, 0.18);
   color: #ffffff;
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-  box-shadow: 0 10px 20px rgba(117, 80, 63, 0.14);
-  transition: transform 160ms ease, box-shadow 160ms ease;
-}
-
-.category-guide-card__link:hover,
-.category-list__link:hover,
-.category-guide-card__note:hover,
-.category-list__note:hover {
-  transform: translateY(-1px);
+  background: linear-gradient(135deg, #b6757d, var(--primary-dark));
+  box-shadow: 0 12px 24px rgba(117, 80, 63, 0.24);
+  transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
 }
 
 .category-guide-card__link:hover,
 .category-list__link:hover {
-  box-shadow: 0 14px 24px rgba(117, 80, 63, 0.2);
+  filter: saturate(1.08);
+  box-shadow: 0 16px 30px rgba(117, 80, 63, 0.3);
+  transform: translateY(-2px);
 }
 
 .category-guide-card__note,
 .category-list__note {
-  border: 1px solid rgba(155, 107, 85, 0.22);
+  border: 1px solid rgba(155, 107, 85, 0.24);
   color: var(--primary-dark);
-  background: rgba(255, 255, 255, 0.74);
-  transition: transform 160ms ease, background-color 160ms ease;
+  background: linear-gradient(180deg, #ffffff, #fff3ef);
+  box-shadow: 0 6px 14px rgba(117, 80, 63, 0.08);
+  transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease;
+}
+
+.category-guide-card__note:hover,
+.category-list__note:hover {
+  border-color: rgba(155, 107, 85, 0.38);
+  background: #fff8f5;
 }
 
 .category-guide-card__note--disabled,
 .category-list__note--disabled {
-  color: var(--muted);
-  background: rgba(247, 239, 233, 0.58);
+  border-color: rgba(112, 104, 97, 0.16);
+  color: rgba(112, 104, 97, 0.78);
+  background: rgba(247, 239, 233, 0.46);
+  box-shadow: none;
   cursor: default;
-  opacity: 0.78;
+  font-weight: 700;
 }
 
 .category-guide-card__note--disabled:hover,
 .category-list__note--disabled:hover {
-  transform: none;
+  border-color: rgba(112, 104, 97, 0.16);
+  background: rgba(247, 239, 233, 0.46);
 }
 
 .pr-slot-card {
