@@ -237,12 +237,20 @@ main {
 
 .top-hero .hero__content {
   max-width: 640px;
-  margin-left: clamp(18px, 4vw, 56px);
+  margin-left: clamp(32px, 5vw, 56px);
   border: 0;
   padding: 0;
   background: transparent;
   box-shadow: none;
   backdrop-filter: none;
+}
+
+
+@media (min-width: 1100px) {
+  .top-hero .hero__content {
+    max-width: min(600px, calc(100% - clamp(96px, 13vw, 190px) - 24px));
+    margin-left: clamp(96px, 13vw, 190px);
+  }
 }
 
 .top-hero .eyebrow {
