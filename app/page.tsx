@@ -1,6 +1,12 @@
 import Link from "next/link";
 import { DiagnosisGrid } from "@/components/DiagnosisGrid";
-import { comingSoonDiagnoses, diagnoses, publishedDiagnoses } from "@/data/diagnoses";
+import {
+  categoryGuides,
+  comingSoonDiagnoses,
+  diagnoses,
+  prGuideSlots,
+  publishedDiagnoses,
+} from "@/data/diagnoses";
 
 export default function Home() {
   return (
@@ -38,6 +44,44 @@ export default function Home() {
           <p>診断本体は各専門サイトで提供し、このサイトでは入口として概要を案内します。</p>
         </div>
         <DiagnosisGrid items={diagnoses} featured />
+      </section>
+
+      <section className="section section--soft">
+        <div className="section__header">
+          <p className="eyebrow">Themes</p>
+          <h2>気になるテーマから探す</h2>
+          <p>恋愛・婚活・出会い方など、今の悩みに近いテーマから診断を探せます。</p>
+        </div>
+        <div className="category-guide-grid">
+          {categoryGuides.map((category) => (
+            <Link className="category-guide-card" href={category.href} key={category.slug}>
+              <span className={`status-badge status-badge--${category.status}`}>
+                {category.status === "published" ? "公開済み" : "準備中"}
+              </span>
+              <h3>{category.name}</h3>
+              <p>{category.lead}</p>
+              <span className="category-guide-card__link">詳しく見る</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="section section--pr">
+        <div className="section__header">
+          <p className="eyebrow">PR Guide</p>
+          <h2>おすすめ案内・PR枠</h2>
+          <p>今後、診断テーマに関連するサービスや読みものを、PR表記のうえで掲載する予定です。</p>
+        </div>
+        <div className="pr-slot-grid" aria-label="今後掲載予定のPR枠">
+          {prGuideSlots.map((slot) => (
+            <article className="pr-slot-card" key={slot.title}>
+              <span className="pr-slot-card__label">PR掲載予定</span>
+              <h3>{slot.title}</h3>
+              <p>{slot.description}</p>
+            </article>
+          ))}
+        </div>
+        <p className="pr-slot-note">※現在、この枠に外部広告リンクや広告コードは設置していません。</p>
       </section>
     </>
   );
