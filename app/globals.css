@@ -11,6 +11,7 @@
   --primary-soft: #f0ddd3;
   --green: #5f8a73;
   --green-soft: #e6f1ea;
+  --note-pink: #dd8c9b;
   --shadow: 0 22px 60px rgba(116, 80, 63, 0.12);
 }
 
@@ -236,6 +237,7 @@ main {
 
 .top-hero .hero__content {
   max-width: 640px;
+  margin-left: clamp(32px, 5vw, 56px);
   border: 0;
   padding: 0;
   background: transparent;
@@ -243,8 +245,21 @@ main {
   backdrop-filter: none;
 }
 
+
+@media (min-width: 1100px) {
+  .top-hero .hero__content {
+    max-width: min(600px, calc(100% - clamp(96px, 13vw, 190px) - 24px));
+    margin-left: clamp(96px, 13vw, 190px);
+  }
+}
+
 .top-hero .eyebrow {
   color: var(--primary-dark);
+}
+
+.top-hero__title-line {
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .top-hero p,
@@ -494,7 +509,7 @@ main {
 
 .category-guide-card__note,
 .category-list__note {
-  border: 1px solid rgba(221, 140, 155, 0.78);
+  border: 1px solid color-mix(in srgb, var(--note-pink) 78%, transparent);
   color: #8c4554;
   background: linear-gradient(180deg, #ffffff 0%, #fde8ec 100%);
   box-shadow: 0 9px 18px rgba(221, 140, 155, 0.2);
@@ -503,7 +518,7 @@ main {
 
 .category-guide-card__note:hover,
 .category-list__note:hover {
-  border-color: #dd8c9b;
+  border-color: var(--note-pink);
   color: #743845;
   background: #fff0f3;
   box-shadow: 0 12px 22px rgba(221, 140, 155, 0.26);
@@ -517,9 +532,9 @@ main {
 
 .category-guide-card__note--disabled,
 .category-list__note--disabled {
-  border-color: rgba(221, 140, 155, 0.92);
+  border-color: color-mix(in srgb, var(--note-pink) 92%, transparent);
   color: #ffffff;
-  background: linear-gradient(135deg, #dd8c9b 0%, #cf7988 100%);
+  background: linear-gradient(135deg, var(--note-pink) 0%, #cf7988 100%);
   box-shadow: 0 10px 20px rgba(221, 140, 155, 0.28);
   cursor: default;
   font-weight: 700;
@@ -528,9 +543,9 @@ main {
 
 .category-guide-card__note--disabled:hover,
 .category-list__note--disabled:hover {
-  border-color: rgba(221, 140, 155, 0.92);
+  border-color: color-mix(in srgb, var(--note-pink) 92%, transparent);
   color: #ffffff;
-  background: linear-gradient(135deg, #dd8c9b 0%, #cf7988 100%);
+  background: linear-gradient(135deg, var(--note-pink) 0%, #cf7988 100%);
   box-shadow: 0 10px 20px rgba(221, 140, 155, 0.28);
 }
 
@@ -809,6 +824,10 @@ main {
     padding: 38px;
   }
 
+  .top-hero .hero__content {
+    margin-left: 0;
+  }
+
   .top-hero .hero__panel {
     width: 100%;
   }
@@ -884,6 +903,10 @@ main {
       rgba(255, 255, 255, 0.42) 48%,
       rgba(255, 255, 255, 0.12) 100%
     );
+  }
+
+  .top-hero__title {
+    font-size: clamp(1.85rem, 8.2vw, 2.35rem);
   }
 
   .top-hero .hero__panel div {
