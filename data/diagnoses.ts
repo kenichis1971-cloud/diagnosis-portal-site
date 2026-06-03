@@ -76,12 +76,23 @@ export const diagnoses: Diagnosis[] = [
 export const publishedDiagnoses = diagnoses.filter((diagnosis) => diagnosis.status === "published");
 export const comingSoonDiagnoses = diagnoses.filter((diagnosis) => diagnosis.status === "coming-soon");
 
-export const categoryGuides = diagnoses.map((diagnosis) => ({
+export type CategoryGuide = {
+  slug: string;
+  name: string;
+  lead: string;
+  href: string;
+  status: Diagnosis["status"];
+  noteUrl?: string;
+  noteLabel?: string;
+};
+
+export const categoryGuides: CategoryGuide[] = diagnoses.map((diagnosis) => ({
   slug: diagnosis.slug,
   name: diagnosis.category,
   lead: diagnosis.categoryLead,
   href: diagnosis.href,
   status: diagnosis.status,
+  noteLabel: "note",
 }));
 
 export const prGuideSlots = [

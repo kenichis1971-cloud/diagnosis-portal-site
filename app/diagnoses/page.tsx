@@ -26,15 +26,36 @@ export default function DiagnosesPage() {
         </div>
         <div className="category-list" aria-label="カテゴリー別の診断一覧">
           {categoryGuides.map((category) => (
-            <Link className="category-list__item" href={category.href} key={category.slug}>
-              <div>
+            <article className="category-list__item" key={category.slug}>
+              <div className="category-list__content">
                 <span className="category-list__name">{category.name}</span>
                 <p>{category.lead}</p>
               </div>
-              <span className={`status-badge status-badge--${category.status}`}>
-                {category.status === "published" ? "公開済み" : "準備中"}
-              </span>
-            </Link>
+              <div className="category-list__meta">
+                <span className={`status-badge status-badge--${category.status}`}>
+                  {category.status === "published" ? "公開済み" : "準備中"}
+                </span>
+                <div className="category-list__actions">
+                  <Link className="category-list__link" href={category.href}>
+                    テーマを見る
+                  </Link>
+                  {category.noteUrl ? (
+                    <a
+                      className="category-list__note"
+                      href={category.noteUrl}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      {category.noteLabel ?? "note"}
+                    </a>
+                  ) : (
+                    <span className="category-list__note category-list__note--disabled">
+                      note準備中
+                    </span>
+                  )}
+                </div>
+              </div>
+            </article>
           ))}
         </div>
       </section>
