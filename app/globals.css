@@ -19,10 +19,12 @@
 }
 
 html {
+  overflow-x: clip;
   scroll-behavior: smooth;
 }
 
 body {
+  overflow-x: clip;
   margin: 0;
   color: var(--text);
   background:
@@ -171,11 +173,13 @@ main {
 .page-hero.hero-image-slot,
 .detail-card.hero-image-slot {
   min-height: clamp(320px, 36vw, 480px);
-  border-color: rgba(234, 223, 214, 0.58);
+  border-inline: 0;
+  border-color: rgba(234, 223, 214, 0.28);
+  border-radius: 0;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.74), rgba(255, 247, 238, 0.5)),
     rgba(255, 255, 255, 0.68);
-  box-shadow: 0 18px 44px rgba(116, 80, 63, 0.1);
+  box-shadow: none;
 }
 
 .page-hero.hero-image-slot::before,
@@ -213,11 +217,11 @@ main {
 .top-hero {
   min-height: clamp(460px, 50vw, 620px);
   margin-top: 28px;
-  border: 1px solid rgba(234, 223, 214, 0.5);
-  border-radius: 36px;
+  border: 0;
+  border-radius: 0;
   padding: clamp(42px, 6vw, 72px);
   background-image: url("/images/heroes/top-hero-pc.jpeg");
-  box-shadow: 0 20px 48px rgba(116, 80, 63, 0.14);
+  box-shadow: none;
 }
 
 .top-hero::before {
@@ -486,10 +490,10 @@ main {
 }
 
 .hero-image-slot {
-  width: calc(100vw - 32px);
-  max-width: none;
-  margin-right: calc(50% - 50vw + 16px);
-  margin-left: calc(50% - 50vw + 16px);
+  width: 100vw;
+  max-width: 100vw;
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
 }
 
 .page-hero.hero-image-slot,
@@ -509,13 +513,6 @@ main {
   width: fit-content;
 }
 
-@media (min-width: 1392px) {
-  .hero-image-slot {
-    width: 1360px;
-    margin-right: calc(50% - 680px);
-    margin-left: calc(50% - 680px);
-  }
-}
 
 .text-page h2 {
   margin: 30px 0 10px;
@@ -646,7 +643,7 @@ main {
   .top-hero {
     min-height: 620px;
     margin-top: 18px;
-    border-radius: 28px;
+    border-radius: 0;
     padding: 30px 22px;
     background-image: url("/images/heroes/top-hero-sp.jpeg");
     background-position: center top;
@@ -673,9 +670,10 @@ main {
   }
 
   .hero-image-slot {
-    width: calc(100vw - 24px);
-    margin-right: calc(50% - 50vw + 12px);
-    margin-left: calc(50% - 50vw + 12px);
+    width: 100vw;
+    max-width: 100vw;
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
   }
 
   .page-hero.hero-image-slot,
