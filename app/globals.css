@@ -494,32 +494,33 @@ main {
 
 .category-guide-card__note,
 .category-list__note {
-  border: 1px solid rgba(155, 107, 85, 0.42);
-  color: #8f5661;
-  background: #ffffff;
-  box-shadow: 0 4px 10px rgba(117, 80, 63, 0.08);
-  transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease;
+  border: 1px solid rgba(221, 140, 155, 0.78);
+  color: #8c4554;
+  background: linear-gradient(180deg, #ffffff 0%, #fde8ec 100%);
+  box-shadow: 0 9px 18px rgba(221, 140, 155, 0.2);
+  transition: border-color 160ms ease, background-color 160ms ease, box-shadow 160ms ease, color 160ms ease;
 }
 
 .category-guide-card__note:hover,
 .category-list__note:hover {
-  border-color: rgba(143, 86, 97, 0.64);
-  color: #754452;
-  background: #fff7f5;
+  border-color: #dd8c9b;
+  color: #743845;
+  background: #fff0f3;
+  box-shadow: 0 12px 22px rgba(221, 140, 155, 0.26);
 }
 
 .category-guide-card__note:focus-visible,
 .category-list__note:focus-visible {
-  outline: 3px solid rgba(143, 86, 97, 0.2);
+  outline: 3px solid rgba(221, 140, 155, 0.28);
   outline-offset: 3px;
 }
 
 .category-guide-card__note--disabled,
 .category-list__note--disabled {
-  border-color: rgba(112, 104, 97, 0.2);
-  color: rgba(112, 104, 97, 0.72);
-  background: #f3f0ed;
-  box-shadow: none;
+  border-color: rgba(221, 140, 155, 0.92);
+  color: #ffffff;
+  background: linear-gradient(135deg, #dd8c9b 0%, #cf7988 100%);
+  box-shadow: 0 10px 20px rgba(221, 140, 155, 0.28);
   cursor: default;
   font-weight: 700;
   pointer-events: none;
@@ -527,10 +528,10 @@ main {
 
 .category-guide-card__note--disabled:hover,
 .category-list__note--disabled:hover {
-  border-color: rgba(112, 104, 97, 0.2);
-  color: rgba(112, 104, 97, 0.72);
-  background: #f3f0ed;
-  box-shadow: none;
+  border-color: rgba(221, 140, 155, 0.92);
+  color: #ffffff;
+  background: linear-gradient(135deg, #dd8c9b 0%, #cf7988 100%);
+  box-shadow: 0 10px 20px rgba(221, 140, 155, 0.28);
 }
 
 .pr-slot-card {
