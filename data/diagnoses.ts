@@ -1,5 +1,13 @@
+export type DiagnosisSlug =
+  | "love"
+  | "marriage"
+  | "meeting-style"
+  | "reunion"
+  | "beauty"
+  | "sexual-worries";
+
 export type Diagnosis = {
-  slug: string;
+  slug: DiagnosisSlug;
   name: string;
   status: "published" | "coming-soon";
   category: string;
@@ -72,6 +80,11 @@ export const diagnoses: Diagnosis[] = [
     href: "/sexual-worries",
   },
 ];
+
+export const getDiagnosesBySlugs = (slugs: DiagnosisSlug[]) =>
+  slugs
+    .map((slug) => diagnoses.find((diagnosis) => diagnosis.slug === slug))
+    .filter((diagnosis): diagnosis is Diagnosis => Boolean(diagnosis));
 
 export const publishedDiagnoses = diagnoses.filter((diagnosis) => diagnosis.status === "published");
 export const comingSoonDiagnoses = diagnoses.filter((diagnosis) => diagnosis.status === "coming-soon");
