@@ -199,8 +199,8 @@ main {
 }
 
 /*
-  Future hero image slots. Add background images to these page-specific classes later.
-  The top page uses uploaded .jpeg assets; remaining pages are intentionally unset.
+  Hero image slots. The top page uses uploaded .jpeg assets;
+  theme pages use their matching uploaded .jpg assets.
 */
 .top-hero,
 .diagnoses-hero,
@@ -213,6 +213,34 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.diagnoses-hero {
+  background-image: url("/images/heroes/diagnoses-hero-pc.jpg");
+}
+
+.love-hero {
+  background-image: url("/images/heroes/love-hero-pc.jpg");
+}
+
+.marriage-hero {
+  background-image: url("/images/heroes/marriage-hero-pc.jpg");
+}
+
+.meeting-style-hero {
+  background-image: url("/images/heroes/meeting-style-hero-pc.jpg");
+}
+
+.reunion-hero {
+  background-image: url("/images/heroes/reunion-hero-pc.jpg");
+}
+
+.beauty-hero {
+  background-image: url("/images/heroes/beauty-hero-pc.jpg");
+}
+
+.sexual-worries-hero {
+  background-image: url("/images/heroes/sexual-worries-hero-pc.jpg");
 }
 
 .top-hero {
@@ -903,6 +931,34 @@ main {
       rgba(255, 255, 255, 0.42) 48%,
       rgba(255, 255, 255, 0.12) 100%
     );
+  }
+
+  .diagnoses-hero {
+    background-image: url("/images/heroes/diagnoses-hero-sp.jpg");
+  }
+
+  .love-hero {
+    background-image: url("/images/heroes/love-hero-sp.jpg");
+  }
+
+  .marriage-hero {
+    background-image: url("/images/heroes/marriage-hero-sp.jpg");
+  }
+
+  .meeting-style-hero {
+    background-image: url("/images/heroes/meeting-style-hero-sp.jpg");
+  }
+
+  .reunion-hero {
+    background-image: url("/images/heroes/reunion-hero-sp.jpg");
+  }
+
+  .beauty-hero {
+    background-image: url("/images/heroes/beauty-hero-sp.jpg");
+  }
+
+  .sexual-worries-hero {
+    background-image: url("/images/heroes/sexual-worries-hero-sp.jpg");
   }
 
   .top-hero__title {
