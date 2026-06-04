@@ -804,6 +804,12 @@ main {
   line-height: 1.4;
 }
 
+.detail-card.hero-image-slot .lead-text,
+.detail-card.hero-image-slot .detail-card__body,
+.detail-card.hero-image-slot .notice-box {
+  color: #2f2926;
+}
+
 .text-page h2 {
   margin: 30px 0 10px;
   font-size: 1.28rem;
