@@ -173,24 +173,24 @@ main {
 
 .page-hero.hero-image-slot,
 .detail-card.hero-image-slot {
-  min-height: clamp(320px, 36vw, 480px);
+  min-height: clamp(340px, 38vw, 500px);
   border-inline: 0;
-  border-color: rgba(234, 223, 214, 0.28);
+  border-color: rgba(234, 223, 214, 0.2);
   border-radius: 0;
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.74), rgba(255, 247, 238, 0.5)),
-    rgba(255, 255, 255, 0.68);
+  background-color: transparent;
   box-shadow: none;
+  backdrop-filter: none;
 }
 
 .page-hero.hero-image-slot::before,
 .detail-card.hero-image-slot::before {
   background: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0.94) 0%,
-    rgba(255, 250, 247, 0.82) 42%,
-    rgba(255, 250, 247, 0.42) 70%,
-    rgba(255, 250, 247, 0.08) 100%
+    rgba(255, 255, 255, 0.72) 0%,
+    rgba(255, 250, 247, 0.68) 34%,
+    rgba(255, 250, 247, 0.34) 58%,
+    rgba(255, 250, 247, 0.1) 82%,
+    rgba(255, 250, 247, 0.04) 100%
   );
 }
 
@@ -736,6 +736,12 @@ main {
   text-align: center;
 }
 
+.page-hero.hero-image-slot,
+.detail-card.hero-image-slot {
+  padding-block: clamp(46px, 7vw, 76px);
+  padding-inline: max(28px, calc((100vw - 1120px) / 2 + 48px));
+}
+
 .detail-card {
   max-width: 860px;
 }
@@ -774,7 +780,7 @@ main {
 
 .page-hero.hero-image-slot > *,
 .detail-card.hero-image-slot > * {
-  width: min(100%, 720px);
+  width: min(100%, 700px);
 }
 
 .detail-card.hero-image-slot .button {
@@ -985,7 +991,18 @@ main {
 
   .page-hero.hero-image-slot,
   .detail-card.hero-image-slot {
-    min-height: clamp(360px, 82vw, 460px);
+    min-height: clamp(380px, 88vw, 500px);
+    padding: 38px 24px;
+  }
+
+  .page-hero.hero-image-slot::before,
+  .detail-card.hero-image-slot::before {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.62) 0%,
+      rgba(255, 250, 247, 0.5) 46%,
+      rgba(255, 250, 247, 0.18) 100%
+    );
   }
 
   .detail-card.hero-image-slot .button {
