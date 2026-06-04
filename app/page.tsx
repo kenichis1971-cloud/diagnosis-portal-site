@@ -21,7 +21,7 @@ export default function Home() {
             <br />
             <span className="top-hero__title-line">やさしく選べる場所</span>
           </h1>
-          <p>
+          <p className="top-hero__lead">
             恋愛・婚活・出会い方など、気持ちや行動を整理するための診断をまとめました。
           </p>
           <div className="hero__actions">
