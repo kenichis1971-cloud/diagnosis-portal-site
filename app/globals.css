@@ -787,6 +787,22 @@ main {
   width: fit-content;
 }
 
+.detail-card.hero-image-slot > .detail-card__header {
+  width: fit-content;
+  max-width: min(100%, 700px);
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.detail-card__header .eyebrow {
+  margin-bottom: 0;
+}
+
+.detail-card__header .status-badge {
+  padding: 3px 9px;
+  font-size: 0.72rem;
+  line-height: 1.4;
+}
 
 .text-page h2 {
   margin: 30px 0 10px;
