@@ -209,7 +209,8 @@ main {
 .meeting-style-hero,
 .reunion-hero,
 .beauty-hero,
-.sexual-worries-hero {
+.sexual-worries-hero,
+.advertising-hero {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -241,6 +242,10 @@ main {
 
 .sexual-worries-hero {
   background-image: url("/images/heroes/sexual-worries-hero-pc.jpg");
+}
+
+.advertising-hero {
+  background-image: url("/images/heroes/advertising-hero-pc.jpg");
 }
 
 .top-hero {
@@ -993,6 +998,10 @@ main {
 
   .sexual-worries-hero {
     background-image: url("/images/heroes/sexual-worries-hero-sp.jpg");
+  }
+
+  .advertising-hero {
+    background-image: url("/images/heroes/advertising-hero-sp.jpg");
   }
 
   .top-hero__title {
