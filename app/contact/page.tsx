@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/app/metadata";
 import { PageHero } from "@/components/PageHero";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "お問い合わせ",
   description: "こころ診断ナビへのお問い合わせについての案内です。",
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

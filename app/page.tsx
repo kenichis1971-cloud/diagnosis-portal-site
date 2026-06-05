@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { createPageMetadata, defaultDescription } from "@/app/metadata";
 import { DiagnosisGrid } from "@/components/DiagnosisGrid";
 import {
   categoryGuides,
@@ -9,6 +10,11 @@ import {
   prGuideSlots,
   publishedDiagnoses,
 } from "@/data/diagnoses";
+
+export const metadata = createPageMetadata({
+  description: defaultDescription,
+  path: "/",
+});
 
 export default function Home() {
   return (

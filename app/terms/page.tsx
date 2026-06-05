@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/app/metadata";
 import { PageHero } from "@/components/PageHero";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "利用規約・免責事項",
   description: "こころ診断ナビの利用規約と免責事項です。",
-};
+  path: "/terms",
+});
 
 export default function TermsPage() {
   return (

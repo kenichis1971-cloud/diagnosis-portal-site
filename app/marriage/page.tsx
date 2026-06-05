@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/app/metadata";
 import { DiagnosisIntro } from "@/components/DiagnosisIntro";
 import { RelatedDiagnoses } from "@/components/RelatedDiagnoses";
 import { diagnoses } from "@/data/diagnoses";
 
 const diagnosis = diagnoses.find((item) => item.slug === "marriage")!;
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "婚活診断",
   description: "婚活スタイルや行動の方向性を整理する婚活診断サイトを紹介します。",
-};
+  path: "/marriage",
+});
 
 export default function MarriagePage() {
   return (

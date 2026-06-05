@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/app/metadata";
 import Link from "next/link";
 import { DiagnosisGrid } from "@/components/DiagnosisGrid";
 import {
@@ -9,10 +9,11 @@ import {
 } from "@/data/diagnoses";
 import { PageHero } from "@/components/PageHero";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "診断一覧",
   description: "恋愛・婚活・出会い方など、こころ診断ナビに掲載している診断一覧です。",
-};
+  path: "/diagnoses",
+});
 
 export default function DiagnosesPage() {
   return (
