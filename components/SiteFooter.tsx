@@ -21,6 +21,12 @@ export function SiteFooter() {
           </Link>
         ))}
       </nav>
+      <div className="site-footer__notice" aria-label="広告・PRに関するご案内">
+        <p>
+          当サイトでは、広告・PRを含む案内を掲載する場合があります。詳しくは
+          <Link href="/advertising">広告・PR方針</Link>をご確認ください。
+        </p>
+      </div>
     </footer>
   );
 }
