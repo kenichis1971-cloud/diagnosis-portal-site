@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/app/metadata";
 import { DiagnosisIntro } from "@/components/DiagnosisIntro";
 import { RelatedDiagnoses } from "@/components/RelatedDiagnoses";
 import { diagnoses } from "@/data/diagnoses";
 
 const diagnosis = diagnoses.find((item) => item.slug === "sexual-worries")!;
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "性の悩み診断（準備中）",
   description: "恋愛・結婚の中で言葉にしづらい性に関する悩みを、やさしく整理する診断予定ページです。",
-};
+  path: "/sexual-worries",
+});
 
 export default function SexualWorriesPage() {
   return (

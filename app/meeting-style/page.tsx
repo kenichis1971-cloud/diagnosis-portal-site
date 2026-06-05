@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/app/metadata";
 import { DiagnosisIntro } from "@/components/DiagnosisIntro";
 import { RelatedDiagnoses } from "@/components/RelatedDiagnoses";
 import { diagnoses } from "@/data/diagnoses";
 
 const diagnosis = diagnoses.find((item) => item.slug === "meeting-style")!;
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "出会い方診断",
   description: "自分に合う出会い方を整理する出会い方診断サイトを紹介します。",
-};
+  path: "/meeting-style",
+});
 
 export default function MeetingStylePage() {
   return (

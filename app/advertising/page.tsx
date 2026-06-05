@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/app/metadata";
 import { PageHero } from "@/components/PageHero";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "広告・外部リンク・PR表記方針",
   description: "こころ診断ナビの広告、外部リンク、PR表記に関する方針です。",
-};
+  path: "/advertising",
+});
 
 export default function AdvertisingPage() {
   return (

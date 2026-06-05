@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/app/metadata";
 import { PageHero } from "@/components/PageHero";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "プライバシーポリシー",
   description: "こころ診断ナビのプライバシーポリシーです。",
-};
+  path: "/privacy",
+});
 
 export default function PrivacyPage() {
   return (

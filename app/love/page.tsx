@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/app/metadata";
 import { DiagnosisIntro } from "@/components/DiagnosisIntro";
 import { RelatedDiagnoses } from "@/components/RelatedDiagnoses";
 import { diagnoses } from "@/data/diagnoses";
 
 const diagnosis = diagnoses.find((item) => item.slug === "love")!;
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "恋愛診断",
   description: "恋愛傾向や気持ちの整理に役立つ恋愛診断サイトを紹介します。",
-};
+  path: "/love",
+});
 
 export default function LovePage() {
   return (
