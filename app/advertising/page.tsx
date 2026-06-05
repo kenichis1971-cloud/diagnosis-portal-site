@@ -13,6 +13,7 @@ export default function AdvertisingPage() {
         eyebrow="Advertising Policy"
         title="広告・外部リンク・PR表記方針"
         description="広告や外部リンクを掲載する場合の基本方針をまとめています。"
+        className="advertising-hero"
       />
       <section className="text-page">
         <h2>広告掲載について</h2>

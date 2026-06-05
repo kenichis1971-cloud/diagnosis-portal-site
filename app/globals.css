@@ -209,7 +209,8 @@ main {
 .meeting-style-hero,
 .reunion-hero,
 .beauty-hero,
-.sexual-worries-hero {
+.sexual-worries-hero,
+.advertising-hero {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -241,6 +242,20 @@ main {
 
 .sexual-worries-hero {
   background-image: url("/images/heroes/sexual-worries-hero-pc.jpg");
+}
+
+.advertising-hero {
+  background-image: url("/images/heroes/advertising-hero-pc.jpg");
+}
+
+.page-hero.hero-image-slot.advertising-hero > h1 {
+  width: min(100%, 860px);
+  max-width: 860px;
+  font-size: clamp(2rem, 4.2vw, 3.05rem);
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 .top-hero {
@@ -993,6 +1008,16 @@ main {
 
   .sexual-worries-hero {
     background-image: url("/images/heroes/sexual-worries-hero-sp.jpg");
+  }
+
+  .advertising-hero {
+    background-image: url("/images/heroes/advertising-hero-sp.jpg");
+  }
+
+  .page-hero.hero-image-slot.advertising-hero > h1 {
+    font-size: clamp(1.25rem, 5.2vw, 1.85rem);
+    line-height: 1.24;
+    letter-spacing: -0.03em;
   }
 
   .top-hero__title {
