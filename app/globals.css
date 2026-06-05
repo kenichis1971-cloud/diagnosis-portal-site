@@ -248,6 +248,16 @@ main {
   background-image: url("/images/heroes/advertising-hero-pc.jpg");
 }
 
+.page-hero.hero-image-slot.advertising-hero > h1 {
+  width: min(100%, 860px);
+  max-width: 860px;
+  font-size: clamp(2rem, 4.2vw, 3.05rem);
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
 .top-hero {
   min-height: clamp(460px, 50vw, 620px);
   margin-top: 28px;
@@ -1002,6 +1012,12 @@ main {
 
   .advertising-hero {
     background-image: url("/images/heroes/advertising-hero-sp.jpg");
+  }
+
+  .page-hero.hero-image-slot.advertising-hero > h1 {
+    font-size: clamp(1.25rem, 5.2vw, 1.85rem);
+    line-height: 1.24;
+    letter-spacing: -0.03em;
   }
 
   .top-hero__title {
