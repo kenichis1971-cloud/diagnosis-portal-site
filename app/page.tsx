@@ -1,10 +1,9 @@
 import Link from "next/link";
 import { createPageMetadata, defaultDescription } from "@/app/metadata";
+import { ColumnGuide } from "@/components/ColumnGuide";
 import { DiagnosisGrid } from "@/components/DiagnosisGrid";
 import {
   categoryGuides,
-  categoryNotePlaceholderLabel,
-  defaultCategoryNoteLabel,
   comingSoonDiagnoses,
   diagnoses,
   prGuideSlots,
@@ -34,7 +33,9 @@ export default function Home() {
             <Link className="button" href="/diagnoses">
               診断一覧を見る
             </Link>
-            <span className="hero__note">公開済み3件・準備中3件を掲載しています。</span>
+            <span className="hero__note">
+              公開済み3件・準備中3件を掲載しています。
+            </span>
           </div>
         </div>
         <div className="hero__panel" aria-label="掲載診断の状態">
@@ -60,16 +61,22 @@ export default function Home() {
         <div className="section__header">
           <p className="eyebrow">Diagnoses</p>
           <h2>掲載中・準備中の診断</h2>
-          <p>診断本体は各専門サイトで提供し、このサイトでは入口として概要を案内します。</p>
+          <p>
+            診断本体は各専門サイトで提供し、このサイトでは入口として概要を案内します。
+          </p>
         </div>
         <DiagnosisGrid items={diagnoses} featured />
       </section>
+
+      <ColumnGuide variant="home" />
 
       <section className="section section--soft">
         <div className="section__header">
           <p className="eyebrow">Themes</p>
           <h2>気になるテーマから探す</h2>
-          <p>恋愛・婚活・出会い方など、今の悩みに近いテーマから診断を探せます。</p>
+          <p>
+            恋愛・婚活・出会い方など、今の悩みに近いテーマから診断を探せます。
+          </p>
         </div>
         <div className="category-guide-grid">
           {categoryGuides.map((category) => (
@@ -80,23 +87,12 @@ export default function Home() {
               <h3>{category.name}</h3>
               <p>{category.lead}</p>
               <div className="category-guide-card__actions">
-                <Link className="category-guide-card__link" href={category.href}>
+                <Link
+                  className="category-guide-card__link"
+                  href={category.href}
+                >
                   テーマを見る
                 </Link>
-                {category.noteUrl ? (
-                  <a
-                    className="category-guide-card__note"
-                    href={category.noteUrl}
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    {category.noteLabel ?? defaultCategoryNoteLabel}
-                  </a>
-                ) : (
-                  <span className="category-guide-card__note category-guide-card__note--disabled">
-                    {categoryNotePlaceholderLabel}
-                  </span>
-                )}
               </div>
             </article>
           ))}
@@ -107,7 +103,9 @@ export default function Home() {
         <div className="section__header">
           <p className="eyebrow">PR Guide</p>
           <h2>おすすめ案内・PR枠</h2>
-          <p>今後、診断テーマに関連するサービスや読みものを、PR表記のうえで掲載する予定です。</p>
+          <p>
+            今後、診断テーマに関連するサービスやコラムを、PR表記のうえで掲載する予定です。
+          </p>
         </div>
         <div className="pr-slot-grid" aria-label="今後掲載予定のPR枠">
           {prGuideSlots.map((slot) => (
@@ -118,7 +116,9 @@ export default function Home() {
             </article>
           ))}
         </div>
-        <p className="pr-slot-note">※現在、この枠に外部広告リンクや広告コードは設置していません。</p>
+        <p className="pr-slot-note">
+          ※現在、この枠に外部広告リンクや広告コードは設置していません。
+        </p>
       </section>
     </>
   );

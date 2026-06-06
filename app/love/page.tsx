@@ -1,4 +1,5 @@
 import { createPageMetadata } from "@/app/metadata";
+import { ColumnGuide } from "@/components/ColumnGuide";
 import { DiagnosisIntro } from "@/components/DiagnosisIntro";
 import { RelatedDiagnoses } from "@/components/RelatedDiagnoses";
 import { diagnoses } from "@/data/diagnoses";
@@ -24,6 +25,7 @@ export default function LovePage() {
         currentSlug="love"
         relatedSlugs={["marriage", "meeting-style", "reunion"]}
       />
+      <ColumnGuide themeSlug="love" variant="theme" />
     </>
   );
 }

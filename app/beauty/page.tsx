@@ -1,4 +1,5 @@
 import { createPageMetadata } from "@/app/metadata";
+import { ColumnGuide } from "@/components/ColumnGuide";
 import { DiagnosisIntro } from "@/components/DiagnosisIntro";
 import { RelatedDiagnoses } from "@/components/RelatedDiagnoses";
 import { diagnoses } from "@/data/diagnoses";
@@ -7,7 +8,8 @@ const diagnosis = diagnoses.find((item) => item.slug === "beauty")!;
 
 export const metadata = createPageMetadata({
   title: "美容診断（準備中）",
-  description: "自分に合う美容・セルフケアの方向性を整理する診断予定ページです。",
+  description:
+    "自分に合う美容・セルフケアの方向性を整理する診断予定ページです。",
   path: "/beauty",
 });
 
@@ -24,6 +26,7 @@ export default function BeautyPage() {
         currentSlug="beauty"
         relatedSlugs={["love", "marriage", "diagnoses"]}
       />
+      <ColumnGuide themeSlug="beauty" variant="theme" />
     </>
   );
 }
