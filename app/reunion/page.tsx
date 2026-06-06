@@ -1,4 +1,5 @@
 import { createPageMetadata } from "@/app/metadata";
+import { BlogReadingGuide } from "@/components/BlogReadingGuide";
 import { DiagnosisIntro } from "@/components/DiagnosisIntro";
 import { RelatedDiagnoses } from "@/components/RelatedDiagnoses";
 import { diagnoses } from "@/data/diagnoses";
@@ -7,7 +8,8 @@ const diagnosis = diagnoses.find((item) => item.slug === "reunion")!;
 
 export const metadata = createPageMetadata({
   title: "復縁診断（準備中）",
-  description: "復縁したい気持ちや今後の向き合い方を整理する診断予定ページです。",
+  description:
+    "復縁したい気持ちや今後の向き合い方を整理する診断予定ページです。",
   path: "/reunion",
 });
 
@@ -24,6 +26,7 @@ export default function ReunionPage() {
         currentSlug="reunion"
         relatedSlugs={["love", "meeting-style", "sexual-worries"]}
       />
+      <BlogReadingGuide themeSlug="reunion" variant="theme" />
     </>
   );
 }
