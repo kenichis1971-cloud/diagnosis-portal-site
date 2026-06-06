@@ -71,12 +71,23 @@ export function ColumnGuide({ themeSlug, variant = "home" }: ColumnGuideProps) {
               <h3>{item.title}</h3>
               <p>{item.description}</p>
               <span className="column-guide__planned">{item.plannedLabel}</span>
+              <div
+                className="column-guide__actions"
+                aria-label={`${item.title}の追加予定導線`}
+              >
+                <span className="column-guide__action column-guide__action--column">
+                  コラム追加予定
+                </span>
+                <span className="column-guide__action column-guide__action--note">
+                  note準備中
+                </span>
+              </div>
             </article>
           ))}
         </div>
         <p className="column-guide__note">
           ※現在、外部コラムURL・note
-          URL・広告リンク・広告コードは設置していません。noteは今後追加予定です。
+          URL・広告リンク・広告コードは設置していません。
         </p>
       </div>
     </section>
