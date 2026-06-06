@@ -1362,10 +1362,10 @@ main {
 }
 
 .column-guide__action--column {
-  border: 1px solid rgba(155, 107, 85, 0.32);
-  color: var(--primary-dark);
-  background: linear-gradient(180deg, #ffffff, var(--primary-soft));
-  box-shadow: 0 9px 18px rgba(116, 80, 63, 0.12);
+  border: 1px solid #6c3d45;
+  color: #ffffff;
+  background: linear-gradient(135deg, #b25f73 0%, #7b4a46 58%, #5f3b34 100%);
+  box-shadow: 0 14px 28px rgba(95, 59, 52, 0.3);
 }
 
 .column-guide__action--note {
