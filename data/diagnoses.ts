@@ -76,7 +76,8 @@ export const diagnoses: Diagnosis[] = [
     status: "coming-soon",
     category: "性の悩み",
     categoryLead: "言葉にしづらい悩みの整理",
-    description: "恋愛・結婚の中で言葉にしづらい性に関する悩みを、やさしく整理する診断予定です。",
+    description:
+      "恋愛・結婚の中で言葉にしづらい性に関する悩みを、やさしく整理する診断予定です。",
     href: "/sexual-worries",
   },
 ];
@@ -86,11 +87,12 @@ export const getDiagnosesBySlugs = (slugs: DiagnosisSlug[]) =>
     .map((slug) => diagnoses.find((diagnosis) => diagnosis.slug === slug))
     .filter((diagnosis): diagnosis is Diagnosis => Boolean(diagnosis));
 
-export const publishedDiagnoses = diagnoses.filter((diagnosis) => diagnosis.status === "published");
-export const comingSoonDiagnoses = diagnoses.filter((diagnosis) => diagnosis.status === "coming-soon");
-
-export const defaultCategoryNoteLabel = "note";
-export const categoryNotePlaceholderLabel = "note準備中";
+export const publishedDiagnoses = diagnoses.filter(
+  (diagnosis) => diagnosis.status === "published",
+);
+export const comingSoonDiagnoses = diagnoses.filter(
+  (diagnosis) => diagnosis.status === "coming-soon",
+);
 
 export type CategoryGuide = {
   slug: string;
@@ -98,8 +100,6 @@ export type CategoryGuide = {
   lead: string;
   href: string;
   status: Diagnosis["status"];
-  noteUrl?: string;
-  noteLabel?: string;
 };
 
 export const categoryGuides: CategoryGuide[] = diagnoses.map((diagnosis) => ({
@@ -108,20 +108,22 @@ export const categoryGuides: CategoryGuide[] = diagnoses.map((diagnosis) => ({
   lead: diagnosis.categoryLead,
   href: diagnosis.href,
   status: diagnosis.status,
-  noteLabel: defaultCategoryNoteLabel,
 }));
 
 export const prGuideSlots = [
   {
     title: "占い鑑定・気持ち整理",
-    description: "恋愛や人間関係の気持ちを、落ち着いて見つめるための案内枠です。",
+    description:
+      "恋愛や人間関係の気持ちを、落ち着いて見つめるための案内枠です。",
   },
   {
     title: "婚活・出会いサービス",
-    description: "婚活や出会い方の選択肢を、比較しやすく紹介するための案内枠です。",
+    description:
+      "婚活や出会い方の選択肢を、比較しやすく紹介するための案内枠です。",
   },
   {
     title: "美容・セルフケア",
-    description: "日々のセルフケアや美容に関する読みものを掲載するための案内枠です。",
+    description:
+      "日々のセルフケアや美容に関するコラムを掲載するための案内枠です。",
   },
 ] as const;

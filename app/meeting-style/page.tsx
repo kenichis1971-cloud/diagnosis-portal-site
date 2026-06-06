@@ -1,5 +1,5 @@
 import { createPageMetadata } from "@/app/metadata";
-import { BlogReadingGuide } from "@/components/BlogReadingGuide";
+import { ColumnGuide } from "@/components/ColumnGuide";
 import { DiagnosisIntro } from "@/components/DiagnosisIntro";
 import { RelatedDiagnoses } from "@/components/RelatedDiagnoses";
 import { diagnoses } from "@/data/diagnoses";
@@ -25,7 +25,7 @@ export default function MeetingStylePage() {
         currentSlug="meeting-style"
         relatedSlugs={["love", "marriage", "reunion"]}
       />
-      <BlogReadingGuide themeSlug="meeting-style" variant="theme" />
+      <ColumnGuide themeSlug="meeting-style" variant="theme" />
     </>
   );
 }

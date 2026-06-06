@@ -1,11 +1,9 @@
 import Link from "next/link";
 import { createPageMetadata, defaultDescription } from "@/app/metadata";
-import { BlogReadingGuide } from "@/components/BlogReadingGuide";
+import { ColumnGuide } from "@/components/ColumnGuide";
 import { DiagnosisGrid } from "@/components/DiagnosisGrid";
 import {
   categoryGuides,
-  categoryNotePlaceholderLabel,
-  defaultCategoryNoteLabel,
   comingSoonDiagnoses,
   diagnoses,
   prGuideSlots,
@@ -70,7 +68,7 @@ export default function Home() {
         <DiagnosisGrid items={diagnoses} featured />
       </section>
 
-      <BlogReadingGuide variant="home" />
+      <ColumnGuide variant="home" />
 
       <section className="section section--soft">
         <div className="section__header">
@@ -95,20 +93,6 @@ export default function Home() {
                 >
                   テーマを見る
                 </Link>
-                {category.noteUrl ? (
-                  <a
-                    className="category-guide-card__note"
-                    href={category.noteUrl}
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    {category.noteLabel ?? defaultCategoryNoteLabel}
-                  </a>
-                ) : (
-                  <span className="category-guide-card__note category-guide-card__note--disabled">
-                    {categoryNotePlaceholderLabel}
-                  </span>
-                )}
               </div>
             </article>
           ))}
@@ -120,7 +104,7 @@ export default function Home() {
           <p className="eyebrow">PR Guide</p>
           <h2>おすすめ案内・PR枠</h2>
           <p>
-            今後、診断テーマに関連するサービスや読みものを、PR表記のうえで掲載する予定です。
+            今後、診断テーマに関連するサービスやコラムを、PR表記のうえで掲載する予定です。
           </p>
         </div>
         <div className="pr-slot-grid" aria-label="今後掲載予定のPR枠">

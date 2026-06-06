@@ -1,5 +1,5 @@
 import { createPageMetadata } from "@/app/metadata";
-import { BlogReadingGuide } from "@/components/BlogReadingGuide";
+import { ColumnGuide } from "@/components/ColumnGuide";
 import { DiagnosisIntro } from "@/components/DiagnosisIntro";
 import { RelatedDiagnoses } from "@/components/RelatedDiagnoses";
 import { diagnoses } from "@/data/diagnoses";
@@ -26,7 +26,7 @@ export default function BeautyPage() {
         currentSlug="beauty"
         relatedSlugs={["love", "marriage", "diagnoses"]}
       />
-      <BlogReadingGuide themeSlug="beauty" variant="theme" />
+      <ColumnGuide themeSlug="beauty" variant="theme" />
     </>
   );
 }

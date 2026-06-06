@@ -1,5 +1,5 @@
 import { createPageMetadata } from "@/app/metadata";
-import { BlogReadingGuide } from "@/components/BlogReadingGuide";
+import { ColumnGuide } from "@/components/ColumnGuide";
 import { DiagnosisIntro } from "@/components/DiagnosisIntro";
 import { RelatedDiagnoses } from "@/components/RelatedDiagnoses";
 import { diagnoses } from "@/data/diagnoses";
@@ -26,7 +26,7 @@ export default function SexualWorriesPage() {
         currentSlug="sexual-worries"
         relatedSlugs={["love", "reunion", "marriage"]}
       />
-      <BlogReadingGuide themeSlug="sexual-worries" variant="theme" />
+      <ColumnGuide themeSlug="sexual-worries" variant="theme" />
     </>
   );
 }

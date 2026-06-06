@@ -1,13 +1,8 @@
 import { createPageMetadata } from "@/app/metadata";
-import { BlogReadingGuide } from "@/components/BlogReadingGuide";
+import { ColumnGuide } from "@/components/ColumnGuide";
 import Link from "next/link";
 import { DiagnosisGrid } from "@/components/DiagnosisGrid";
-import {
-  categoryGuides,
-  categoryNotePlaceholderLabel,
-  defaultCategoryNoteLabel,
-  diagnoses,
-} from "@/data/diagnoses";
+import { categoryGuides, diagnoses } from "@/data/diagnoses";
 import { PageHero } from "@/components/PageHero";
 
 export const metadata = createPageMetadata({
@@ -26,7 +21,7 @@ export default function DiagnosesPage() {
         description="公開済みの診断は外部の診断サイトへ移動できます。準備中の診断は、公開までお待ちください。"
         className="diagnoses-hero"
       />
-      <BlogReadingGuide variant="diagnoses" />
+      <ColumnGuide variant="diagnoses" />
 
       <section className="section section--compact">
         <div className="section__header">
@@ -53,20 +48,6 @@ export default function DiagnosesPage() {
                   <Link className="category-list__link" href={category.href}>
                     テーマを見る
                   </Link>
-                  {category.noteUrl ? (
-                    <a
-                      className="category-list__note"
-                      href={category.noteUrl}
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      {category.noteLabel ?? defaultCategoryNoteLabel}
-                    </a>
-                  ) : (
-                    <span className="category-list__note category-list__note--disabled">
-                      {categoryNotePlaceholderLabel}
-                    </span>
-                  )}
                 </div>
               </div>
             </article>
