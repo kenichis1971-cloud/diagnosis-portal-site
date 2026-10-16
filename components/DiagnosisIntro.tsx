@@ -1,4 +1,5 @@
 import type { Diagnosis } from "@/data/diagnoses";
+import Link from "next/link";
 
 type DiagnosisIntroProps = {
   diagnosis: Diagnosis;
@@ -25,6 +26,8 @@ export function DiagnosisIntro({ diagnosis, children, heroClassName }: Diagnosis
         <a className="button" href={diagnosis.externalUrl} target="_blank" rel="noopener noreferrer">
           {diagnosis.buttonLabel}
         </a>
+      ) : isPublished && diagnosis.diagnosisHref ? (
+        <Link className="button" href={diagnosis.diagnosisHref}>診断を始める</Link>
       ) : (
         <p className="notice-box">この診断は準備中です。公開までしばらくお待ちください。</p>
       )}

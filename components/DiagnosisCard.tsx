@@ -32,6 +32,8 @@ export function DiagnosisCard({ diagnosis, featured = false }: DiagnosisCardProp
           >
             診断サイトを見る
           </a>
+        ) : isPublished && diagnosis.diagnosisHref ? (
+          <Link className="button button--small" href={diagnosis.diagnosisHref}>診断を始める</Link>
         ) : (
           <span className="coming-soon-label">準備中</span>
         )}

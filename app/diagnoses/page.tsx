@@ -18,7 +18,7 @@ export default function DiagnosesPage() {
       <PageHero
         eyebrow="診断一覧"
         title="気になるテーマから診断を選ぶ"
-        description="公開済みの診断は外部の診断サイトへ移動できます。準備中の診断は、公開までお待ちください。"
+        description="公開済みの診断は、このサイト内や外部の診断サイトで受けられます。準備中の診断は、公開までお待ちください。"
         className="diagnoses-hero"
       />
       <ColumnGuide variant="diagnoses" />
