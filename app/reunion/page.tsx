@@ -7,9 +7,8 @@ import { diagnoses } from "@/data/diagnoses";
 const diagnosis = diagnoses.find((item) => item.slug === "reunion")!;
 
 export const metadata = createPageMetadata({
-  title: "復縁診断（準備中）",
-  description:
-    "復縁したい気持ちや今後の向き合い方を整理する診断予定ページです。",
+  title: "復縁可能性診断",
+  description: diagnosis.description,
   path: "/reunion",
 });
 
@@ -18,8 +17,8 @@ export default function ReunionPage() {
     <>
       <DiagnosisIntro diagnosis={diagnosis} heroClassName="reunion-hero">
         <p>
-          復縁診断は準備中です。過去の関係を急いで結論づけるのではなく、自分の気持ちやこれからの距離感を
-          穏やかに整理できる内容を予定しています。
+          10問の回答から、今の距離感やご自身の気持ちを整理し、今日できる行動を考えます。
+          復縁の成否や相手の気持ちを予測するものではありません。答えづらいときは、途中で休んでも大丈夫です。
         </p>
       </DiagnosisIntro>
       <RelatedDiagnoses

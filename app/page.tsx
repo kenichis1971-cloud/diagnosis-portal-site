@@ -34,7 +34,7 @@ export default function Home() {
               診断一覧を見る
             </Link>
             <span className="hero__note">
-              公開済み3件・準備中3件を掲載しています。
+              公開済み{publishedDiagnoses.length}件・準備中{comingSoonDiagnoses.length}件を掲載しています。
             </span>
           </div>
         </div>
@@ -62,7 +62,7 @@ export default function Home() {
           <p className="eyebrow">Diagnoses</p>
           <h2>掲載中・準備中の診断</h2>
           <p>
-            診断本体は各専門サイトで提供し、このサイトでは入口として概要を案内します。
+            このサイト内や各専門サイトで受けられる診断の概要を案内します。
           </p>
         </div>
         <DiagnosisGrid items={diagnoses} featured />

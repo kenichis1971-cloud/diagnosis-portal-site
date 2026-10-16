@@ -9,6 +9,7 @@ const routes = [
   "/marriage",
   "/meeting-style",
   "/reunion",
+  "/reunion/diagnosis",
   "/beauty",
   "/sexual-worries",
   "/privacy",

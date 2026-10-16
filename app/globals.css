@@ -15,6 +15,32 @@
   --shadow: 0 22px 60px rgba(116, 80, 63, 0.12);
 }
 
+.reunion-quiz fieldset {
+  min-width: 0;
+  margin: 24px 0;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+.reunion-quiz legend { font-weight: 700; padding-inline: 6px; }
+.reunion-quiz__option {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 12px;
+  margin-block: 8px;
+  border-radius: 12px;
+  background: var(--background);
+  cursor: pointer;
+}
+.reunion-quiz__option:has(input:checked) { background: var(--primary-soft); }
+.reunion-quiz input { accent-color: var(--primary-dark); }
+.reunion-quiz button { font: inherit; cursor: pointer; }
+.reunion-quiz button:disabled { opacity: .5; cursor: default; }
+.reunion-quiz :focus-visible { outline: 3px solid var(--primary-dark); outline-offset: 4px; }
+.reunion-quiz__result { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--line); }
+.reunion-quiz [tabindex="-1"] { scroll-margin-top: 130px; }
+
 * {
   box-sizing: border-box;
 }

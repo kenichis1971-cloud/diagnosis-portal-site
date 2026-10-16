@@ -15,6 +15,7 @@ export type Diagnosis = {
   description: string;
   href: string;
   externalUrl?: string;
+  diagnosisHref?: string;
   buttonLabel?: string;
 };
 
@@ -54,12 +55,13 @@ export const diagnoses: Diagnosis[] = [
   },
   {
     slug: "reunion",
-    name: "復縁診断",
-    status: "coming-soon",
+    name: "復縁可能性診断",
+    status: "published",
     category: "復縁",
     categoryLead: "過去の関係との向き合い方",
-    description: "復縁したい気持ちや今後の向き合い方を整理する診断予定です。",
+    description: "元恋人との距離感や連絡状況をもとに、今のあなたに合った向き合い方をやさしく整理します。",
     href: "/reunion",
+    diagnosisHref: "/reunion/diagnosis",
   },
   {
     slug: "beauty",
